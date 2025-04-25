@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/public/assets/polices/Poppins/Poppins-Bold.ttf') format('poppins-Bold'),
+          url('/public/assets/polices/Poppins/Poppins-Light.ttf') format('poppins-Light'),
+          url('/public/assets/polices/Poppins/Poppins-ExtraLight.ttf') format('poppins-ExtraLight'),
+          url('/public/assets/polices/Poppins/Poppins-SemiBold.ttf') format('poppins-SemiBold'),
+          url('/public/assets/polices/Poppins/Poppins-ExtraBold.ttf') format('poppins-ExtraBold'),
+
+}
+
+/* Scrollbar style */
+.scroll-gray::-webkit-scrollbar {
+  height: 3px; /* horizontal */
+  width: 8px; /* vertical */
+}
+
+.scroll-gray::-webkit-scrollbar-track {
+  background: #f9fafb; /* gray-50 */
+}
+
+.scroll-gray::-webkit-scrollbar-thumb {
+  background-color: #d1d5db; /* gray-300 */
+  border-radius: 10px;
+  border: 2px solid #f9fafb; /* gray-50 */
+}
