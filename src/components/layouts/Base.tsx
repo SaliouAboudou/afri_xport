@@ -891,7 +891,7 @@ export const Base = () => {
             </ul>
           </div>
         </div>
-        <div className=" w-full px-18  justify-center">
+        <div className=" w-full md:px-18  justify-center">
           <hr className=" w-full text-amber-50"/>
           <p className=" opcaty-75 text-center py-3 text-sm md:text-medium w-ful">&copy;copyRight; Tous droits réservés.</p>
         </div>
