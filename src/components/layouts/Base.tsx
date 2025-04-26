@@ -855,7 +855,8 @@ export const Base = () => {
 
       {/* Footer  */}
 
-      <div className=''></div>
+      <div className=' w-full md:px-18 px-6 bg-amber-600 py-3'></div>
+
     </div>
   )
 }
