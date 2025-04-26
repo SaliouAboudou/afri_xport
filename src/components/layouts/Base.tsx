@@ -1,8 +1,16 @@
+
+
+
+import { FaFacebook } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
 import img1 from '../../../src/assets/images/image1.png'
 import vet1 from '../../../src/assets/images/vet1.webp'
 import vet2 from '../../../src/assets/images/vet2.webp'
 import vet3 from '../../../src/assets/images/vet3.webp'
 import vet4 from '../../../src/assets/images/vet4.webp'
+
 
 export const Base = () => {
   return (
@@ -856,7 +864,37 @@ export const Base = () => {
       {/* Footer  */}
 
       <div className=' w-full md:px-18 px-6 bg-amber-600 py-3'>
-        <div className=' w-full py-3 bg-amber-100'></div>
+        <div className=" flex justify-center w-full bg-white  rounded-md">
+          <form action="" className=" flex w-full">
+            <input type="search" className="border-0 py-2 rounded-md flex-1 px-4" placeholder="Search..."/>
+            <button className=" px-4 cursor-pointer"><FaSearch/></button>
+          </form>
+        </div>
+        <div className=' w-full gap-5 grid grid-col-1 md:grid-cols-3 py-3 '>
+          <div>
+            <h1 className='  text-3xl md:text-6xl font-extrabold'>Afri<span className=' text-white'>Xport</span></h1>
+          </div>
+          <div>
+            <ul className=' flex flex-col gap-2'>
+              <li className=' font-semibold hover:opacity-75 text-white'><a href="#">A Propos </a></li>
+              <li className=' font-semibold hover:opacity-75 text-white'><a href="#">FAQ</a></li>
+              <li className=' font-semibold hover:opacity-75 text-white'><a href="#">Conditions</a></li>
+              <li className=' font-semibold hover:opacity-75 text-white'><a href="#">Contact</a></li>
+             
+            </ul>
+          </div>
+          <div>
+            <ul className=' flex flex-col gap-2'>
+              <li className=' font-semibold hover:opacity-75 flex gap-x-2 items-center text-white'><FaFacebook className=' text-indigo-600 text-xl '/><a href="#">Facebook </a></li>
+              <li className=' font-semibold hover:opacity-75 flex gap-x-2 items-center text-white'><FaYoutube className=' text-red-600 text-xl'/><a href="#">Youtube </a></li>
+              <li className=' font-semibold hover:opacity-75 flex gap-x-2 items-center text-white'><FaInstagramSquare className=' text-pink-600 text-xl'/><a href="#">Instagram </a></li>
+            </ul>
+          </div>
+        </div>
+        <div className=" w-full px-18  justify-center">
+          <hr className=" w-full text-amber-50"/>
+          <p className=" opcaty-75 text-center py-3">&copy;copyRight; Tous droits réservés.</p>
+        </div>
       </div>
 
     </div>
