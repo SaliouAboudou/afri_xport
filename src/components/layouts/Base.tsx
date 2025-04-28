@@ -10,12 +10,31 @@ import vet1 from '../../../src/assets/images/vet1.webp'
 import vet2 from '../../../src/assets/images/vet2.webp'
 import vet3 from '../../../src/assets/images/vet3.webp'
 import vet4 from '../../../src/assets/images/vet4.webp'
+import { useState } from "react";
+import CustomModal from "../reutilisables/CustomModal";
+import ChoiceFournisseurLivreur from "../reutilisables/ChoiceFournisseurLivreur";
 
 
 export const Base = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  const handleConfirm = () => {
+    alert("Action confirmée !");
+    closeModal();
+  };
+
   return (
     <div className=' flex flex-col  w-full relative overflow-hidden'>
 
+      
+      <ChoiceFournisseurLivreur 
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title="S'inscrire en tant que Fournisseur ou Livreur ?"/>
       {/* Zone accueil  */}
 
       {/* Section header */}
@@ -28,7 +47,7 @@ export const Base = () => {
           </div>
           {/* Zone droite les boutons  */}
           <div className=' hidden md:block md:flex-row md:items-center md:gap-2 md:justify-between'>
-            <button className=' bg-transparent border border-amber-600 rounded-lg px-4 p-2 text-sm md:me-3 text-amber-600 cursor-pointer hover:bg-amber-50 duration-500 '>Je suis fournisseur</button>
+            <button className=' bg-transparent border border-amber-600 rounded-lg px-4 p-2 text-sm md:me-3 text-amber-600 cursor-pointer hover:bg-amber-50 duration-500 ' onClick={openModal}>Je suis fournisseur</button>
             <button className=' bg-amber-600  border border-amber-600 rounded-lg px-4 p-2 text-sm  text-white cursor-pointer hover:bg-amber-600/80 duration-500  '>Je suis acheteur</button>
           </div>
         </div>
@@ -43,7 +62,7 @@ export const Base = () => {
           <h3 className='text-center text-3xl font-semibold text-amber-800 md:text-4xl '>Achetez dans un pays voici, recevez sa commande chez sois. En un clic</h3>
           <p className='text-center'> <span>Afri<strong className=' text-amber-600'>Xport</strong> </span> simplifie l’import-export entre pays voisins. Trouvez un fournisseur, passez commande et faites-vous livrer en toute sécurité.</p>
           <div className=' w-full flex px-8 justify-around md:justify-center'>
-          <button className=' bg-white border border-amber-600 rounded-lg px-4 p-2 text-sm md:me-3 text-amber-600 cursor-pointer hover:bg-amber-50 duration-500 '>Je suis fournisseur</button>
+          <button className=' bg-white border border-amber-600 rounded-lg px-4 p-2 text-sm md:me-3 text-amber-600 cursor-pointer hover:bg-amber-50 duration-500 ' onClick={openModal}>Je suis fournisseur</button>
           <button className=' bg-amber-600  border border-amber-600 rounded-lg px-4 p-2 text-sm text-white cursor-pointer hover:bg-amber-600/80 duration-500  '>Je suis acheteur</button>
           </div>
           <span className="size-96 bg-amber-100 rounded-full absolute ms-96 -z-20  blur-2xl opacity-70"></span>
