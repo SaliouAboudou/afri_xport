@@ -11,8 +11,8 @@ import vet2 from '../../../src/assets/images/vet2.webp'
 import vet3 from '../../../src/assets/images/vet3.webp'
 import vet4 from '../../../src/assets/images/vet4.webp'
 import { useState } from "react";
-import CustomModal from "../reutilisables/CustomModal";
 import ChoiceFournisseurLivreur from "../reutilisables/ChoiceFournisseurLivreur";
+import { Link } from "react-router-dom";
 
 
 export const Base = () => {
@@ -22,10 +22,10 @@ export const Base = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const handleConfirm = () => {
-    alert("Action confirmée !");
-    closeModal();
-  };
+  // const handleConfirm = () => {
+  //   alert("Action confirmée !");
+  //   closeModal();
+  // };
 
   return (
     <div className=' flex flex-col  w-full relative overflow-hidden'>
@@ -47,8 +47,8 @@ export const Base = () => {
           </div>
           {/* Zone droite les boutons  */}
           <div className=' hidden md:block md:flex-row md:items-center md:gap-2 md:justify-between'>
-            <button className=' bg-transparent border border-amber-600 rounded-lg px-4 p-2 text-sm md:me-3 text-amber-600 cursor-pointer hover:bg-amber-50 duration-500 ' onClick={openModal}>Je suis fournisseur</button>
-            <button className=' bg-amber-600  border border-amber-600 rounded-lg px-4 p-2 text-sm  text-white cursor-pointer hover:bg-amber-600/80 duration-500  '>Je suis acheteur</button>
+            <button className=' bg-transparent border border-amber-600 rounded-lg px-4 p-2 text-sm md:me-3 text-amber-600 cursor-pointer hover:bg-amber-50 duration-500 active:bg-gay-50' onClick={openModal}>Je suis fournisseur</button>
+            <Link to='/create_acheteur' className=' bg-amber-600  border border-amber-600 rounded-lg px-4 p-2 text-sm text-white cursor-pointer hover:bg-amber-600/80 duration-500  active:bg-amber-300'>Je suis acheteur</Link>
           </div>
         </div>
 
@@ -62,8 +62,8 @@ export const Base = () => {
           <h3 className='text-center text-3xl font-semibold text-amber-800 md:text-4xl '>Achetez dans un pays voici, recevez sa commande chez sois. En un clic</h3>
           <p className='text-center'> <span>Afri<strong className=' text-amber-600'>Xport</strong> </span> simplifie l’import-export entre pays voisins. Trouvez un fournisseur, passez commande et faites-vous livrer en toute sécurité.</p>
           <div className=' w-full flex px-8 justify-around md:justify-center'>
-          <button className=' bg-white border border-amber-600 rounded-lg px-4 p-2 text-sm md:me-3 text-amber-600 cursor-pointer hover:bg-amber-50 duration-500 ' onClick={openModal}>Je suis fournisseur</button>
-          <button className=' bg-amber-600  border border-amber-600 rounded-lg px-4 p-2 text-sm text-white cursor-pointer hover:bg-amber-600/80 duration-500  '>Je suis acheteur</button>
+          <button className=' bg-white border border-amber-600 rounded-lg px-4 p-2 text-sm md:me-3 text-amber-600 cursor-pointer hover:bg-amber-50 duration-500 active:bg-amber-50' onClick={openModal}>Je suis fournisseur</button>
+          <Link to='/create_acheteur' className=' bg-amber-600  border border-amber-600 rounded-lg px-4 p-2 text-sm text-white cursor-pointer hover:bg-amber-600/80 duration-500  active:bg-amber-300'>Je suis acheteur</Link>
           </div>
           <span className="size-96 bg-amber-100 rounded-full absolute ms-96 -z-20  blur-2xl opacity-70"></span>
         </div>
@@ -769,7 +769,7 @@ export const Base = () => {
       <div className='py-3 px-4 w-full md:mt-0 md:px-18 md:flex md:justify-center md:flex-col '>
           <h1 className=' text-2xl   font-extrabold py-2 md:text-center md:text-4xl'>Devenir fournisseur / partenaire logistique</h1>
           <div className=' py-6 grid grid-cols-1   md:flex md:justify-around '>
-            <button className=' bg-amber-600 px-4 w-full py-2 text-white font-semibold rounded-md text-sm md:text-xl hover:bg-amber-500 cursor-pointer'>S’inscrire en tant que fournisseur</button>
+            <button className=' bg-amber-600 px-4 w-full py-2 text-white font-semibold rounded-md text-sm md:text-xl hover:bg-amber-500 cursor-pointer'  onClick={openModal}>S’inscrire en tant que fournisseur</button>
           </div>
       </div>
 

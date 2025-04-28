@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 interface CustomModalProps {
   isOpen: boolean;
@@ -30,8 +31,8 @@ const ChoiceFournisseurLivreur: FC<CustomModalProps> = ({
 
         {/* Contenu */}
         <div className="text-gray-600 mb-6 mx-auto w-full flex justify-center gap-4">
-            <button className=' px-4 py-2 bg-gray-50 rounded-lg border  border-gray-300 focus:bg-amber-600 focus:text-white cursor-pointer'>Fournisseur</button>
-            <button className=' px-4 py-2 bg-gray-50 rounded-lg border border-gray-300 focus:bg-amber-600 focus:text-white cursor-pointer'>Livreur</button>
+            <Link to='/create_fournisseur' className=' px-4 py-2 text-white rounded-lg border  focus:border-gray-300 focus:bg-white focus:text-gray-600  bg-amber-600  cursor-pointer'>Fournisseur</Link>
+            <Link to='/create_livreur' className=' px-4 py-2 text-white rounded-lg border  focus:border-gray-300 focus:bg-white focus:text-gray-600  bg-amber-600  cursor-pointer'>Livreur</Link>
         </div>
 
       </div>
