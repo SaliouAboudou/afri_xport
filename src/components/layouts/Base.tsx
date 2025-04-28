@@ -424,7 +424,7 @@ export const Base = () => {
         <div className=" w-full  py-3 md:block justify-center md:w-full">
           {/* Conteneur scrollable catégories */}
           <div className="w-full scroll-gray">
-            <div className="grid grid-cols-1 md:grid-cols-3 mx-auto lg:grid-cols-4 xl:grid-cols-6gap-5 gap w-max justify-start items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 mx-auto lg:grid-cols-4 xl:grid-cols-6 gap-5 gap w-max justify-start items-center">
             <div className="flex flex-col justify-center border border-gray-300 rounded-md w-80 h-80 min-w-80 md:w-54 md:h-54 md:min-w-54 py-2 px-1 relative overflow-hidden gap-y-1.5">
                 <div className=" md:h-18 overflow-hidden text-center">
                   <img className="h-full mx-auto object-contain" src={vet1} alt="Produit" />
