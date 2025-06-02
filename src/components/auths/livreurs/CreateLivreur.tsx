@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { EtapeOne } from './components/EtapeOne';
 import { EtapeTwo } from './components/EtapeTwo';
 import { EtapeThee } from './components/EtapeThee';
