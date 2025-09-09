@@ -5,14 +5,14 @@ import { FaFacebook } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-import img1 from '../../../src/assets/images/image1.png'
-import vet1 from '../../../src/assets/images/vet1.webp'
-import vet2 from '../../../src/assets/images/vet2.webp'
-import vet3 from '../../../src/assets/images/vet3.webp'
-import vet4 from '../../../src/assets/images/vet4.webp'
 import { useState } from "react";
 import ChoiceFournisseurLivreur from "../reutilisables/ChoiceFournisseurLivreur";
 import { Link } from "react-router-dom";
+import img1 from "../../assets/images/image1.png";
+import vet1 from "../../assets/images/vet1.webp";
+import vet2 from "../../assets/images/vet2.webp";
+import vet3 from "../../assets/images/vet3.webp";
+import vet4 from "../../assets/images/vet4.webp";
 
 
 export const Base = () => {
@@ -54,7 +54,7 @@ export const Base = () => {
 
        {/* Zone image  */}
         <div className='relative -z-10 md:z-0 md:right-0 md:-bottom-12 md:size-96 md: md:absolute bg-amber-100 md:rounded-full md:px-0 md:flex md:justify-center md:items-center md:overflow-hidden '>
-          <img className=' ' src={img1} alt={img1} />
+          <img className='' src={img1} alt="Image 1" />
         </div>
         {/* Content  */}
         <div className='bg-amber-100 w-full pb-12 flex flex-col  text-justify justify-center px-8 md:px-18 -mt-14 gap-2 md:bg-transparent md:pt-10 md:gap-5'>

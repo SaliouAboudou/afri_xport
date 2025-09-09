@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
+// import './App.css'
 import { Base } from './components/layouts/Base'
 import { CreateFournisseur } from './components/auths/fourniseurs/CreateFournisseur'
 import { CreateLivreur } from './components/auths/livreurs/CreateLivreur'
