@@ -1,5 +1,5 @@
 import React from 'react'
-import login1 from '../../assets/images/auths/login1.jpg'
+import login1 from '../../../../assets/images/auths/login1.jpg'
 
 interface EtapeOneProp{
     showEtapeTwoForm: () => void
